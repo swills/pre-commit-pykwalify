@@ -16,6 +16,9 @@ setup(
 
     packages=find_packages(),
     entry_points={'console_scripts': ['pykwalify-validate=pykwalify_validate.cli:main']},
-    install_requires=["PyYAML", "pykwalify"],
+    install_requires=[
+        "PyYAML",
+        'pykwalify@git+https://github.com/swills/pykwalify@bug_fixes#egg=bug_fixes',
+    ],
     test_suite='tests',
 )
